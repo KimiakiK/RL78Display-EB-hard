@@ -1,0 +1,91 @@
+
+(rules PCB RL78Display-EB
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 7234)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+  )
+  (rule
+    (width 254.0)
+    (clear 203.4)
+    (clear 127.0 (type smd_to_turn_gap))
+    (clear 50.8 (type smd_smd))
+  )
+  (padstack "Via[0-1]_609.6:304.8_um"
+    (shape
+      (circle F.Cu 609.6 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 609.6 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_609.6:304.8_um" "Via[0-1]_609.6:304.8_um" default
+  )
+  (via 
+    "Via[0-1]_609.6:304.8_um-kicad_default" "Via[0-1]_609.6:304.8_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_609.6:304.8_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_609.6:304.8_um-kicad_default"
+  )
+  (class default
+    "/TouchController/PAD_AD" "/TouchController/PAD_AU" "/TouchController/PAD_AL" "/TouchController/PAD_AR" "/TouchController/PAD_A" "/TouchController/PAD_B" "/TouchController/PAD_C" "/TouchController/PAD_D"
+    "/PAD_R" "/PAD_L" XT1 XT2 +5V "LED_Status" "Net-(D1-Pad2)" "Net-(F1-Pad1)"
+    "Net-(F1-Pad2)" TOOL0 NRST "POS_V" "POS_H" "SW_D" "SW_C" "SW_B"
+    "SW_A" "TFT_RESET" "TFT_SDA" "TFT_SCL" "TFT_CS" "TFT_DC" "Net-(J3-Pad3)" "TFT_LEDK"
+    "Net-(LS1-Pad1)" "Net-(Q1-Pad1)" "TFT_LED" BUZZER "SW_L" "SW_R" GND +3.3V
+    "Net-(C7-Pad1)" "Net-(C8-Pad1)" "Net-(C9-Pad1)" +3V0 "Net-(C12-Pad1)" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "UART1_TX"
+    "UART1_RX" GPIO "RTC_SCL" "RTC_SDA" "Net-(D4-Pad2)" "Net-(D5-Pad2)" "Net-(D6-Pad2)" "Net-(D7-Pad2)"
+    "Net-(D8-Pad1)" "POS_R" "Net-(D9-Pad1)" "POS_D" "POS_L" "Net-(D10-Pad2)" "POS_U" "Net-(D11-Pad2)"
+    "unconnected-(J1-Pad1)" "unconnected-(J1-Pad3)" "unconnected-(J1-Pad4)" "unconnected-(J1-Pad6)" "unconnected-(J1-Pad7)" "unconnected-(J1-Pad11)" "unconnected-(J2-Pad4)" "unconnected-(U1-Pad3)"
+    "unconnected-(U2-Pad63)" "unconnected-(U2-Pad62)" "unconnected-(U2-Pad61)" "unconnected-(U2-Pad58)" "unconnected-(U2-Pad57)" "unconnected-(U2-Pad54)" "unconnected-(U2-Pad53)" "unconnected-(U2-Pad52)"
+    "unconnected-(U2-Pad51)" "unconnected-(U2-Pad50)" "unconnected-(U2-Pad49)" "unconnected-(U2-Pad48)" "unconnected-(U2-Pad47)" "unconnected-(U2-Pad45)" "unconnected-(U2-Pad39)" "unconnected-(U2-Pad31)"
+    "unconnected-(U2-Pad30)" "unconnected-(U2-Pad29)" "unconnected-(U2-Pad28)" "unconnected-(U2-Pad27)" "unconnected-(U2-Pad26)" "unconnected-(U2-Pad25)" "unconnected-(U2-Pad24)" "unconnected-(U2-Pad23)"
+    "unconnected-(U2-Pad22)" "unconnected-(U2-Pad20)" "unconnected-(U2-Pad19)" "unconnected-(U2-Pad11)" "unconnected-(U2-Pad10)" "unconnected-(U2-Pad9)" "unconnected-(U2-Pad4)" "unconnected-(U2-Pad3)"
+    "unconnected-(U2-Pad2)" "unconnected-(U2-Pad1)" "unconnected-(U3-Pad4)" "unconnected-(U3-Pad6)" "unconnected-(U4-Pad4)" "unconnected-(U4-Pad6)" "unconnected-(U5-Pad6)" "unconnected-(U5-Pad8)"
+    "unconnected-(U5-Pad10)" "unconnected-(U7-Pad6)" "unconnected-(U8-Pad6)" "unconnected-(U9-Pad6)" "unconnected-(U10-Pad6)" "unconnected-(U11-Pad4)" "unconnected-(U11-Pad6)" "unconnected-(U12-Pad4)"
+    "unconnected-(U12-Pad6)" "unconnected-(U13-Pad6)" "unconnected-(U14-Pad6)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
